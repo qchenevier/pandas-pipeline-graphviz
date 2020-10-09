@@ -10,14 +10,16 @@ It's heavily inspired by dask's [`.visualize` method](https://docs.dask.org/en/l
 
 ### Pip
 
+Install with pip:
 ```bash
 $ pip install pandas_pipeline_graphviz
 ```
 
 ### Manual installation
 
+Install manually:
 - git clone
-- `python setup.py`
+- use `python setup.py`
 
 ## Usage
 
