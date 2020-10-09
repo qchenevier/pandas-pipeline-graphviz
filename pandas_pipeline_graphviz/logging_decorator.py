@@ -14,10 +14,14 @@ def get_output_name(f_name, stack_position=2):
     stack = inspect.stack(context=30)
     frame = stack[stack_position]
     var_name = None
-    for code_line in reversed(frame.code_context[: frame.lineno]):
-        if re.search(rf"\ *=\ *{f_name}", code_line):
-            var_name = code_line.split("=")[0].strip()
-            break
+    try:
+        for code_line in reversed(frame.code_context[: frame.lineno]):
+            if re.search(rf"\ *=\ *{f_name}", code_line):
+                var_name = code_line.split("=")[0].strip()
+                break
+    except Exception:  # pylint: disable=broad-except
+        logging.exception("Could not get output name")
+        var_name = None
     return var_name
 
 
@@ -107,4 +111,6 @@ def apply_pandas_pipeline_decorator(function_prefix="compute", **decorator_kwarg
     for name, obj in list(script_globals.items()):
         if isinstance(obj, types.FunctionType):
             if name.startswith(function_prefix):
-                script_globals[name] = pandas_pipeline(script_globals=script_globals, **decorator_kwargs)(obj)
+                script_globals[name] = pandas_pipeline(
+                    script_globals=script_globals, **decorator_kwargs
+                )(obj)
