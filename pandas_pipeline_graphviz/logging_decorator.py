@@ -64,7 +64,7 @@ def pandas_pipeline(graph=None, show_columns=True, log=True, script_globals=None
             for df_name, df in dataframes.items():
                 input_columns |= set(df)
                 if log:
-                    logging.info("%s ◀— %s %s", f.__name__, df_name, df.shape)
+                    logging.info("%s <— %s %s", f.__name__, df_name, df.shape)
                 if isinstance(graph, nx.DiGraph):
                     add_edge_to_graph(
                         graph,
@@ -79,9 +79,9 @@ def pandas_pipeline(graph=None, show_columns=True, log=True, script_globals=None
             if isinstance(output, pd.DataFrame):
                 new_columns = list(set(output) - input_columns)
                 if log:
-                    logging.info("%s —▶ %s %s", f.__name__, output_name, output.shape)
+                    logging.info("%s —> %s %s", f.__name__, output_name, output.shape)
                     logging.debug(
-                        "%s —▶ %s: new_columns=%s", f.__name__, output_name, new_columns
+                        "%s —> %s: new_columns=%s", f.__name__, output_name, new_columns
                     )
                 if isinstance(graph, nx.DiGraph):
                     add_edge_to_graph(

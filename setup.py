@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pandas-pipeline-graphviz", # Replace with your own username
-    version="0.1.2",
+    version="0.1.3",
     author="Quentin Chenevier",
     author_email="qchenevier@users.noreply.github.com",
     description="Pandas pipeline in graphviz",
