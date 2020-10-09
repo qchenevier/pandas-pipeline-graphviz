@@ -1,4 +1,4 @@
-# `pandas_pipeline_graphviz` — Pandas pipeline in graphviz
+# Pandas pipeline in graphviz
 
 Python package to build a nice explanative schema of a data processing pipeline in pandas.
 

@@ -11,7 +11,7 @@ setuptools.setup(
     description="Pandas pipeline in graphviz",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/qchenevier/pandas_pipeline_graphviz",
+    url="https://github.com/qchenevier/pandas-pipeline-graphviz",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
