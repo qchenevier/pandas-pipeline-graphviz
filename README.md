@@ -12,7 +12,7 @@ It's heavily inspired by dask's [`.visualize` method](https://docs.dask.org/en/l
 
 Install with pip:
 ```bash
-$ pip install pandas_pipeline_graphviz
+$ pip install pandas-pipeline-graphviz
 ```
 
 ### Manual installation
