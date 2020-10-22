@@ -23,7 +23,7 @@ $ pip install pandas-pipeline-graphviz
 
 Install manually:
 - git clone
-- use `python setup.py`
+- use `python setup.py`
 
 ## Usage
 
