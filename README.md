@@ -15,9 +15,9 @@ Here is an example from the [examples folder](examples):
 ### Pip
 
 Install with pip:
-```bash
+```bash
 $ pip install pandas-pipeline-graphviz
-```
+```
 
 ### Manual installation
 
