@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/qchenevier/pandas-pipeline-graphviz",
     packages=setuptools.find_packages(),
+    test_suite='tests',
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
